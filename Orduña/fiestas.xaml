@@ -1,0 +1,125 @@
+﻿<common:LayoutAwarePage
+    x:Name="pageRoot"
+    x:Class="Orduña.fiestas"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Orduña"
+    xmlns:data="using:Orduña.Data"
+    xmlns:common="using:Orduña.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Style="{StaticResource LayoutRootStyle}" Background="#FF1D1D1D">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="ApplicationViewStates">
+                <VisualState x:Name="FullScreenLandscape">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid_snapped">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Filled">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid_snapped">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="FullScreenPortrait">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PortraitBackButtonStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedBackButtonStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="scrollViewer">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <ScrollViewer x:Name="scrollViewer" Grid.RowSpan="2" VerticalScrollMode="Disabled" HorizontalScrollBarVisibility="Visible" ZoomMode="Disabled" VerticalSnapPointsType="None" VerticalScrollBarVisibility="Disabled">
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Hidden" RenderTransformOrigin="0.683,0.42">
+                <Grid HorizontalAlignment="Left" Width="1057">
+                    <Image Source="Imagenes/Fotos/globo.jpg" Stretch="UniformToFill"/>
+                </Grid>
+                <!-- Fiestas -->
+                <Grid Margin="1097,0,0,0" HorizontalAlignment="Left" Width="467" VerticalAlignment="Top">
+                    <TextBlock Margin="0,20,0,0" TextWrapping="Wrap" FontSize="18.667" TextAlignment="Justify" LineHeight="20" FontFamily="Segoe UI">
+    					<Run FontSize="21" Text="Otxomaio"/>
+    					<LineBreak/>
+    					<LineBreak/>
+    					<Run FontSize="16" Text="Fiestas patronales que se vienen celebrando desde el año 1600 en honor a la patrona de ciudad y el valle Nuestra Señora de la Antigua. Comienzan el día 29 de abril con el inicio de los actos religiosos, siendo el 8 de mayo el día grande y prorrogándose los festejos hasta el fin de semana siguiente al mismo."/>
+    					<LineBreak/>
+    					<LineBreak/>
+    					<Run FontSize="16" Text="Destaca el tradicional gran ambiente con el que cuentan. Al inaugurarse el calendario festivo en la comarca tiene lugar la renovación del Voto a su patrona, que la ciudad, por medio de su corporación local, ofrece el día 8 de mayo trasladándose al Santuario de la Antigua. A este acto le siguen el festival taurino que se celebra ese mismo día, la feria agrícola-ganadera, el deporte rural y los partidos de pelota mano."/>
+    					<LineBreak/>
+    					<LineBreak/>
+    					<Run FontSize="16" Text="Durante esta celebración tiene lugar el popular baile de Las Entradillas el día 9 de mayo en el mismo Santuario, coincidiendo con la renovación de Voto a la patrona por parte de los vecinos de Arrastaria, así como la quema del Bihotza (el popular txistulari convertido en icono festivo en estos días) el último día de fiestas y el baño en el pilón que pone fin a 15 días festivos."/>
+                    </TextBlock>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Margin="1604,0,0,0" VerticalAlignment="Top" Width="492">
+                    <TextBlock Margin="0,20,0,0" TextWrapping="Wrap" FontSize="18.667" TextAlignment="Justify" LineHeight="20" FontFamily="Segoe UI" HorizontalAlignment="Left" Width="467">
+    					<Run FontSize="21" Text="Semana Santa"/>
+    					<LineBreak/>
+    					<LineBreak/>
+    					<Run FontSize="16" Text="La Semana Santa orduñesa es una muestra más del patrimonio cultural de la ciudad, posible gracias a la Escuela de Cristo, cuyos remotos antecedentes hay que buscarlos en el año 1469, cuando la Orden Franciscana se hace cargo de la ermita de Santa Marina."/>
+    					<LineBreak/>
+    					<LineBreak/>
+    					<Run FontSize="16" Text="Más tarde hay constancia de la existencia de una antigua cofradía denominada de la Vera Cruz, uno de cuyos principales cultos era el Vía Crucis, efectuado el día de Viernes Santo, que, con variaciones, ha llegado hasta nuestros días."/>
+    					<LineBreak/>
+    					<LineBreak/>
+    					<Run FontSize="16" Text="Es a la Santa Escuela de Cristo, fundada como tal el 11 de mayo de 1676, a la que se debe la pervivencia de esta secular tradición procesional en la que cabe destacar la Procesión de la Cruz en la madrugada del día de Viernes Santo."/>
+                    </TextBlock>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+        <Grid x:Name="grid" Grid.Row="1" Height="140" VerticalAlignment="Bottom" Margin="0,0,0,30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Text="Fiestas"/>
+        </Grid>
+        <Grid x:Name="grid_snapped" Margin="0" Grid.RowSpan="2" Background="#FFB22222">
+            <Image Margin="82,190,82,0" Source="Assets/Logo.png" Stretch="Fill" Height="153" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+    
+</common:LayoutAwarePage>

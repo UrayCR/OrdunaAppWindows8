@@ -1,0 +1,186 @@
+﻿<common:LayoutAwarePage
+    x:Name="pageRoot"
+    x:Class="Orduña.imagenes"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Orduña"
+    xmlns:data="using:Orduña.Data"
+    xmlns:common="using:Orduña.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Style="{StaticResource LayoutRootStyle}" Background="#FF1D1D1D">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="ApplicationViewStates">
+                <VisualState x:Name="FullScreenLandscape">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid_snapped">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Filled">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid_snapped">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="FullScreenPortrait"/>
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <!-- Galeria -->
+		<FlipView Grid.RowSpan="2" Margin="0">
+			<Grid Margin="0">
+				<Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria01.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="01 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+			<Grid Margin="0">
+				<Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria02.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="02 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+			<Grid Margin="0">
+                <Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria03.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="03 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+			<Grid Margin="0">
+                <Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria04.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="04 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+			<Grid Margin="0">
+                <Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria05.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="05 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+			<Grid Margin="0">
+                <Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria06.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="06 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+			<Grid Margin="0">
+                <Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria07.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="07 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+			<Grid Margin="0">
+                <Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria08.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="08 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+			<Grid Margin="0">
+                <Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria09.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="09 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+			<Grid Margin="0">
+                <Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria10.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="10 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+			<Grid Margin="0">
+                <Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria11.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="11 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+			<Grid Margin="0">
+                <Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria12.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="12 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+			<Grid Margin="0">
+                <Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria13.jpg" Stretch="UniformToFill"/>
+				<TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="13 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+					<TextBlock.RenderTransform>
+						<CompositeTransform Rotation="-90"/>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+			</Grid>
+            <Grid Margin="0">
+                <Image Margin="342,36,322,191" Height="466" Width="700" Source="Imagenes/Galeria/galeria14.jpg" Stretch="UniformToFill"/>
+                <TextBlock Margin="197,391,920,174" TextWrapping="Wrap" FontSize="21" Text="14 de 14" Width="90" Height="20" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform Rotation="-90"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </Grid>
+        </FlipView>
+		<Grid x:Name="grid" Grid.Row="1" Height="140" VerticalAlignment="Bottom" Margin="0,0,0,30">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+			<TextBlock x:Name="pageTitle" Grid.Column="1" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Text="Imágenes"/>
+		</Grid>
+		<Grid x:Name="grid_snapped" Margin="0" Grid.RowSpan="2" Background="#FFB22222">
+			<Image Margin="82,190,82,0" Source="Assets/Logo.png" Stretch="Fill" Height="153" VerticalAlignment="Top"/>
+		</Grid>
+	</Grid>
+
+</common:LayoutAwarePage>

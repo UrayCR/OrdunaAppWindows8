@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="28472Uray.Ordua" Publisher="CN=Uray" Version="4.1.0.0" />
+  <Properties>
+    <DisplayName>Orduña</DisplayName>
+    <PublisherDisplayName>Uray</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Orduña.App">
+      <VisualElements DisplayName="Orduña" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="OrduñaOrduña, municipio ubicado en la comunidad Autónoma Vasca, participa de su cultura y tradiciones, de su historia y paisaje, conformando un destino turístico imprescindible dentro del País Vasco más verde y natural." ForegroundText="light" BackgroundColor="#B22222">
+        <DefaultTile ShowName="allLogos" WideLogo="Assets\WideLogo.png" />
+        <SplashScreen Image="Assets\SplashScreen.png" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+        </InitialRotationPreference>
+      </VisualElements>
+    </Application>
+  </Applications>
+</Package>

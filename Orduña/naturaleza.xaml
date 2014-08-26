@@ -1,0 +1,122 @@
+﻿<common:LayoutAwarePage
+    x:Name="pageRoot"
+    x:Class="Orduña.naturaleza"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Orduña"
+    xmlns:data="using:Orduña.Data"
+    xmlns:common="using:Orduña.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Style="{StaticResource LayoutRootStyle}" Background="#FF1D1D1D">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="ApplicationViewStates">
+                <VisualState x:Name="FullScreenLandscape">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid_snapped">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Filled">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid_snapped">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="FullScreenPortrait">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PortraitBackButtonStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedBackButtonStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="scrollViewer">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <ScrollViewer x:Name="scrollViewer" Grid.RowSpan="2" VerticalScrollMode="Disabled" HorizontalScrollBarVisibility="Visible" ZoomMode="Disabled" VerticalSnapPointsType="None" VerticalScrollBarVisibility="Disabled">
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Hidden" RenderTransformOrigin="0.683,0.42">
+                <Grid HorizontalAlignment="Left" Width="1057" Margin="0">
+                    <Image Source="Imagenes/Fotos/saltoNervion.jpg" Stretch="UniformToFill"/>
+                </Grid>
+                <!-- Naturaleza -->
+                <Grid HorizontalAlignment="Left" Margin="1097,0,0,0" VerticalAlignment="Top" Width="467">
+                    <TextBlock Margin="0,20,0,0" TextWrapping="Wrap" FontSize="18.667" TextAlignment="Justify" LineHeight="20" FontFamily="Segoe UI">
+						<Run FontSize="21" Text="Txarlazo (927 m)"/>
+						<LineBreak/>
+						<LineBreak/>
+						<Run FontSize="16" Text="Es la cumbre emblemática de Orduña. En ella se alza, asomada al escarpe, la figura de la Virgen de la Antigua, patrona de la Ciudad. El monumento, erigido en 1904, representa el tronco de una morera sobre cuyas ramas se halla la imagen de la Virgen. El conjunto tiene una altura de quince metros."/>
+						<LineBreak/>
+						<LineBreak/>
+						<Run FontSize="16" Text="La ruta hacia la cumbre del Txarlazo tiene un interés histórico adicional, al coincidir su trazado con el antiguo camino carretil que unía la meseta con el Señorío de Bizkaia. El ascenso parte del Santuario de Nuestra Señora de la Antigua."/>
+						<LineBreak/>
+						<LineBreak/>
+						<Run FontSize="21" Text="Tologorri (1.068 m)"/>
+						<LineBreak/>
+						<LineBreak/>
+						<Run FontSize="16" Text="El pico Tologorri es fácilmente reconocible desde el área recreativa de Orduña por su esbelta figura, que asoma como la proa de un barco sobre la aldea de Lendoño Goitia, punto de partida para la ascensión. En el camino a su cumbre se transita una intrépida ruta conocida como la Senda Negra, debido al tono oscuro de la tierra."/>
+                    </TextBlock>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Margin="1604,0,0,0" VerticalAlignment="Top" Width="492">
+                    <TextBlock Margin="0,20,0,0" TextWrapping="Wrap" FontSize="18.667" TextAlignment="Justify" LineHeight="20" FontFamily="Segoe UI" HorizontalAlignment="Left" Width="467">
+						<Run FontSize="21" Text="Mirador del Salto del Nervión"/>
+						<LineBreak/>
+						<LineBreak/>
+						<Run FontSize="16" Text="En uno de los más aislados y profundos recovecos del Monte Santiago, en territorio burgalés, se localiza el espectacular Salto del Nervión. Con sus más de 300 metros de altura y su peculiar forma de cola de caballo conforma una de las cascadas mas grandes y hermosas que se pueden contemplar en toda Europa occidental. Desde el mirador puede observarse el vuelo de numerosas especies de aves."/>
+                    </TextBlock>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+        <Grid x:Name="grid" Grid.Row="1" Height="140" VerticalAlignment="Bottom" Margin="0,0,0,30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Text="Naturaleza"/>
+        </Grid>
+        <Grid x:Name="grid_snapped" Margin="0" Grid.RowSpan="2" Background="#FFB22222">
+            <Image Margin="82,190,82,0" Source="Assets/Logo.png" Stretch="Fill" Height="153" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+    
+</common:LayoutAwarePage>
