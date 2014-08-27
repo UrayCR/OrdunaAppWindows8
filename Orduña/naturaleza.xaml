@@ -81,27 +81,27 @@
                 <!-- Naturaleza -->
                 <Grid HorizontalAlignment="Left" Margin="1097,0,0,0" VerticalAlignment="Top" Width="467">
                     <TextBlock Margin="0,20,0,0" TextWrapping="Wrap" FontSize="18.667" TextAlignment="Justify" LineHeight="20" FontFamily="Segoe UI">
-						<Run FontSize="21" Text="Txarlazo (927 m)"/>
-						<LineBreak/>
-						<LineBreak/>
-						<Run FontSize="16" Text="Es la cumbre emblemática de Orduña. En ella se alza, asomada al escarpe, la figura de la Virgen de la Antigua, patrona de la Ciudad. El monumento, erigido en 1904, representa el tronco de una morera sobre cuyas ramas se halla la imagen de la Virgen. El conjunto tiene una altura de quince metros."/>
-						<LineBreak/>
-						<LineBreak/>
-						<Run FontSize="16" Text="La ruta hacia la cumbre del Txarlazo tiene un interés histórico adicional, al coincidir su trazado con el antiguo camino carretil que unía la meseta con el Señorío de Bizkaia. El ascenso parte del Santuario de Nuestra Señora de la Antigua."/>
-						<LineBreak/>
-						<LineBreak/>
-						<Run FontSize="21" Text="Tologorri (1.068 m)"/>
-						<LineBreak/>
-						<LineBreak/>
-						<Run FontSize="16" Text="El pico Tologorri es fácilmente reconocible desde el área recreativa de Orduña por su esbelta figura, que asoma como la proa de un barco sobre la aldea de Lendoño Goitia, punto de partida para la ascensión. En el camino a su cumbre se transita una intrépida ruta conocida como la Senda Negra, debido al tono oscuro de la tierra."/>
+		    	<Run FontSize="21" Text="Txarlazo (927 m)"/>
+			<LineBreak/>
+			<LineBreak/>
+			<Run FontSize="16" Text="Es la cumbre emblemática de Orduña. En ella se alza, asomada al escarpe, la figura de la Virgen de la Antigua, patrona de la Ciudad. El monumento, erigido en 1904, representa el tronco de una morera sobre cuyas ramas se halla la imagen de la Virgen. El conjunto tiene una altura de quince metros."/>
+			<LineBreak/>
+			<LineBreak/>
+			<Run FontSize="16" Text="La ruta hacia la cumbre del Txarlazo tiene un interés histórico adicional, al coincidir su trazado con el antiguo camino carretil que unía la meseta con el Señorío de Bizkaia. El ascenso parte del Santuario de Nuestra Señora de la Antigua."/>
+			<LineBreak/>
+			<LineBreak/>
+			<Run FontSize="21" Text="Tologorri (1.068 m)"/>
+			<LineBreak/>
+			<LineBreak/>
+			<Run FontSize="16" Text="El pico Tologorri es fácilmente reconocible desde el área recreativa de Orduña por su esbelta figura, que asoma como la proa de un barco sobre la aldea de Lendoño Goitia, punto de partida para la ascensión. En el camino a su cumbre se transita una intrépida ruta conocida como la Senda Negra, debido al tono oscuro de la tierra."/>
                     </TextBlock>
                 </Grid>
                 <Grid HorizontalAlignment="Left" Margin="1604,0,0,0" VerticalAlignment="Top" Width="492">
                     <TextBlock Margin="0,20,0,0" TextWrapping="Wrap" FontSize="18.667" TextAlignment="Justify" LineHeight="20" FontFamily="Segoe UI" HorizontalAlignment="Left" Width="467">
-						<Run FontSize="21" Text="Mirador del Salto del Nervión"/>
-						<LineBreak/>
-						<LineBreak/>
-						<Run FontSize="16" Text="En uno de los más aislados y profundos recovecos del Monte Santiago, en territorio burgalés, se localiza el espectacular Salto del Nervión. Con sus más de 300 metros de altura y su peculiar forma de cola de caballo conforma una de las cascadas mas grandes y hermosas que se pueden contemplar en toda Europa occidental. Desde el mirador puede observarse el vuelo de numerosas especies de aves."/>
+			<Run FontSize="21" Text="Mirador del Salto del Nervión"/>
+			<LineBreak/>
+			<LineBreak/>
+			<Run FontSize="16" Text="En uno de los más aislados y profundos recovecos del Monte Santiago, en territorio burgalés, se localiza el espectacular Salto del Nervión. Con sus más de 300 metros de altura y su peculiar forma de cola de caballo conforma una de las cascadas mas grandes y hermosas que se pueden contemplar en toda Europa occidental. Desde el mirador puede observarse el vuelo de numerosas especies de aves."/>
                     </TextBlock>
                 </Grid>
             </Grid>
